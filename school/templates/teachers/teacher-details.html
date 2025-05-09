@@ -1,0 +1,151 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="page-wrapper">
+<div class="content container-fluid">
+
+<div class="page-header">
+<div class="row">
+<div class="col-sm-12">
+<h3 class="page-title">Teacher Details</h3>
+<ul class="breadcrumb">
+<li class="breadcrumb-item"><a href="/teacher">Teacher</a></li>
+<li class="breadcrumb-item active">Teacher Details</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-body">
+<div class="row">
+<div class="col-md-12">
+<div class="about-info">
+<h4>About Me</h4>
+<div class="media mt-3">
+<img src="{{teacher.teacher_image.url}}" class="mr-3" alt="...">
+<div class="media-body">
+<ul>
+<li>
+<span class="title-span">Full Name : </span>
+<span class="info-span">{{teacher.first_name}} {{teacher.last_name}}</span>
+</li>
+<li>
+<span class="title-span">Department : </span>
+<span class="info-span">{{ teacher.department }}</span>
+</li>
+<li>
+<span class="title-span">Mobile : </span>
+<span class="info-span">{{ teacher.mobile_number }}</span>
+</li>
+<li>
+<span class="title-span">Email : </span>
+<span class="info-span"><a href="mailto:{{ teacher.teacher_email }}">{{teacher.teacher_email}}</a></span>
+</li>
+<li>
+<span class="title-span">Gender : </span>
+<span class="info-span">{{ teacher.gender }}</span>
+</li>
+<li>
+<span class="title-span">DOB : </span>
+<span class="info-span">{{ teacher.date_of_birth }}</span>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="row mt-3">
+<div class="col-md-12">
+<p>Hello, I am {{teacher.first_name}} a dedicated teacher with {{teacher.experience_years}} years of experience in the education field.</p>
+</div>
+</div>
+
+<div class="row follow-sec">
+<div class="col-md-4 mb-3">
+<div class="blue-box">
+<h3>150</h3>
+<p>Published Papers</p>
+</div>
+</div>
+<div class="col-md-4 mb-3">
+<div class="blue-box">
+<h3>{{teacher.experience_years}}</h3>
+<p>Years of Experience</p>
+</div>
+</div>
+<div class="col-md-4 mb-3">
+<div class="blue-box">
+<h3>3000+</h3>
+<p>Students Taught</p>
+</div>
+</div>
+</div>
+
+<div class="row mt-2">
+<div class="col-md-12">
+<h5>Permanent Address</h5>
+<p>{{ teacher.address }}</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="row mt-2">
+<div class="col-md-12">
+<div class="skill-info">
+<h4>Settings</h4>
+<form>
+<div class="row mt-3">
+<div class="col-12 col-sm-6">
+<div class="form-group">
+<label>Username</label>
+<input type="text" class="form-control">
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-group">
+<label>Current Password</label>
+<input type="password" class="form-control">
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-group">
+<label>New Password</label>
+<input type="password" class="form-control">
+</div>
+</div>
+<div class="col-12">
+<button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<footer>
+<p>Copyright © 2024 Jaypal Bhichar.</p>
+</footer>
+
+</div>
+
+</div>
+
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
+<script src="{% static 'assets/js/script.js' %}"></script>
+
+{% endblock %}

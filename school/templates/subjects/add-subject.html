@@ -1,0 +1,51 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="page-wrapper">
+   <div class="content container-fluid">
+      <div class="page-header">
+         <div class="row">
+            <div class="col">
+               <h3 class="page-title">Add Subject</h3>
+               <ul class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                  <li class="breadcrumb-item active">Add Subject</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-md-6">
+            <form method="POST">
+               {% csrf_token %}
+               <div class="form-group">
+                  <label>Subject Name</label>
+                  <input type="text" name="name" class="form-control" required>
+               </div>
+
+               <div class="form-group">
+                  <label>Select Department</label>
+                  <select name="department" class="form-control" required>
+                     <option value="" disabled selected>Select Department</option>
+                     {% for dept in departments %}
+                        <option value="{{ dept.id }}">{{ dept.name }}</option>
+                     {% endfor %}
+                  </select>
+               </div>
+
+               <button type="submit" class="btn btn-primary">Add Subject</button>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+<script src="{%static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+<script src="{%static 'assets/js/popper.min.js' %}"></script>
+<script src="{%static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{%static 'assets/plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
+<script src="{%static 'assets/js/script.js' %}"></script>
+</body>
+
+{% endblock %}
