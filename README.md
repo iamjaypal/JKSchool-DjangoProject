@@ -4,18 +4,6 @@
 
 A comprehensive **Student Management System** built using **Django**, designed to manage student information, including enrollment, attendance, grades, and other administrative functionalities. This application is ideal for schools or educational institutions looking for a streamlined solution to manage student data.
 
-## **Table of Contents**
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Running the Project](#running-the-project)
-- [Screenshots](#screenshots)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## **Features**
 - **Student Enrollment**: Manage student registration and update student details.
 - **Responsive UI**: Mobile-friendly design using HTML/CSS or integrated frontend frameworks.
@@ -28,19 +16,6 @@ A comprehensive **Student Management System** built using **Django**, designed t
 - **Deployment**: Docker (if Dockerized), Nginx, Gunicorn (for production)
 - **Testing**: Django's built-in testing framework
 
-## **Project Structure**
-```
-student_management_system/
-│
-├── manage.py               # Django project manager script
-├── requirements.txt        # Project dependencies
-├── .env                    # Environment variables (add in .gitignore)
-├── student_management/     # Main app containing settings, URLs, WSGI
-├── students/               # App managing student-related functionalities
-├── teachers/               # App managing teacher-related functionalities
-├── classes/                # App managing class schedules and attendance
-└── templates/              # HTML templates
-```
 
 ## **Installation**
 Follow the steps below to get the project up and running on your local machine:
@@ -59,7 +34,19 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 ### **3. Install Dependencies**
 ```bash
-pip install -r requirements.txt
+asgiref==3.8.1
+distlib==0.3.9     
+Django==5.1.1
+filelock==3.18.0
+gunicorn==23.0.0
+packaging==25.0
+pillow==10.4.0
+platformdirs==4.3.7
+sqlparse==0.5.1
+tzdata==2024.1
+virtualenv==20.29.3
+virtualenvwrapper-win==1.2.7
+whitenoise==6.7.0
 ```
 
 ### **4. Set Up Database**
